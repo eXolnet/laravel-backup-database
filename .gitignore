@@ -1,0 +1,12 @@
+/vendor
+composer.lock
+composer.phar
+phpunit.xml
+.env
+/.idea
+/.vscode
+/.vagrant
+_ide_helper.php
+.phpstorm.meta.php
+.DS_Store
+Thumbs.db
