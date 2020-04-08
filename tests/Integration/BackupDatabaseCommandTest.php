@@ -13,7 +13,7 @@ class BackupDatabaseCommandTest extends TestCase
     /** @var string */
     protected $expectedDumpPath;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
