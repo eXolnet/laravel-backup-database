@@ -16,9 +16,14 @@ cache:
   directories:
     - $HOME/.composer/cache
 
+services:
+  - mysql
+
 before_script:
   - travis_retry composer self-update
   - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-dist -vvv
+  - mysql -e 'CREATE DATABASE forge;'
+  - mysql -e 'CREATE DATABASE custom_database;'
 
 script:
   - composer test
