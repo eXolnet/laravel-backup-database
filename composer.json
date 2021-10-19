@@ -11,10 +11,16 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Patrick Gagnon-Renaud",
-            "email": "pgrenaud@exolnet.com",
-            "homepage": "https://www.exolnet.com",
-            "role": "Developer"
+            "name": "Alexandre D'Eschambeault",
+            "email": "adeschambeault@exolnet.com"
+        },
+        {
+            "name": "Pat Gagnon-Renaud",
+            "email": "pgrenaud@exolnet.com"
+        },
+        {
+            "name": "Simon Gaudreau",
+            "email": "sgaudreau@exolnet.com"
         }
     ],
     "require": {
