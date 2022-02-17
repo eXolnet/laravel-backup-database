@@ -5,6 +5,7 @@ namespace Exolnet\Backup\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Carbon;
 use Spatie\Backup\Tasks\Backup\DbDumperFactory;
+use Spatie\DbDumper\Compressors\GzipCompressor;
 
 class BackupDatabaseCommand extends Command
 {
@@ -48,7 +49,7 @@ class BackupDatabaseCommand extends Command
         $connection = $this->option('connection') ?: config('database.default');
 
         $this->dbDumper = DbDumperFactory::createFromConnection($connection);
-        $this->dbDumper->enableCompression();
+        $this->dbDumper->useCompressor(new GzipCompressor());
     }
 
     /**
