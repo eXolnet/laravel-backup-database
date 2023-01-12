@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Carbon;
 use Spatie\Backup\Tasks\Backup\DbDumperFactory;
 use Spatie\DbDumper\Compressors\GzipCompressor;
+use Spatie\DbDumper\Databases\MySql;
 
 class BackupDatabaseCommand extends Command
 {
@@ -50,6 +51,14 @@ class BackupDatabaseCommand extends Command
 
         $this->dbDumper = DbDumperFactory::createFromConnection($connection);
         $this->dbDumper->useCompressor(new GzipCompressor());
+
+        if ($this->dbDumper instanceof MySql) {
+            $this->dbDumper
+                ->addExtraOption('--force')
+                ->addExtraOption('--routines')
+                ->useSingleTransaction()
+                ->setGtidPurged('OFF');
+        }
     }
 
     /**
