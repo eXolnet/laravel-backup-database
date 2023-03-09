@@ -2,7 +2,7 @@
 
 [![Latest Release](https://img.shields.io/packagist/v/eXolnet/laravel-backup-database.svg?style=flat-square)](https://packagist.org/packages/eXolnet/laravel-backup-database)
 [![Total Downloads](https://img.shields.io/packagist/dt/eXolnet/laravel-backup-database.svg?style=flat-square)](https://packagist.org/packages/eXolnet/laravel-backup-database)
-[![Build Status](https://img.shields.io/github/workflow/status/eXolnet/laravel-backup-database/tests?label=tests&style=flat-square)](https://github.com/eXolnet/laravel-backup-database/actions?query=workflow%3Atests)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/eXolnet/laravel-backup-database/tests.yml?label=tests&style=flat-square)](https://github.com/eXolnet/laravel-backup-database/actions?query=workflow%3Atests)
 [![Software License](https://img.shields.io/badge/license-MIT-8469ad.svg?style=flat-square)](LICENSE)
 
 Expend laravel-backup by adding a simple command to backup a database. No configuration required!
